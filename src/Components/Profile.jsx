@@ -7,28 +7,24 @@ export default class Profile extends Component {
         this.state = {
             timer: 0,
             interval: null,
-            Person : {
-        fullName: "Elon Musk",
-        bio:
-            "Elon Musk is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. ... Musk made headlines in May 2012, when SpaceX launched a rocket that would send the first commercial vehicle to the International Space Station",
-        profession: "CEO of Tesla & SpaceX",
-        ImgSrc:"/elonMusk.jpg"
-    }
+            Person: {
+                fullName: "Elon Musk",
+                bio:
+                    "Elon Musk is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. ... Musk made headlines in May 2012, when SpaceX launched a rocket that would send the first commercial vehicle to the International Space Station",
+                profession: "CEO of Tesla & SpaceX",
+                ImgSrc: "/elonMusk.jpg",
+            },
         };
     }
-  
-    // componentDidMount() {
-    //     this.setState({
-    //         interval: setInterval(() => {
-    //             this.setState({ timer: this.state.timer + 1 });
-    //         }, 1000),
-    //     });
-    // };
+
     componentDidMount() {
-        setInterval(() => {
-            this.setState({ timer: this.state.timer + 1 });
-        }, 1000);
+        this.setState({
+            interval: setInterval(() => {
+                this.setState({ timer: this.state.timer + 1 });
+            }, 1000),
+        });
     }
+
     render() {
         return (
             <>
