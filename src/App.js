@@ -9,7 +9,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            shows: true,
+            shows: false,
         };
     }
     toggleVisibililiy = () => {
@@ -28,7 +28,7 @@ export default class App extends Component {
                 >
                     {this.state.shows ? "Hide profile" : "Show profile"}
                 </Button>
-                <h1>{this.state.shows && <Profile />}</h1>
+                {this.state.shows && <Profile />}
             </div>
         );
     }
